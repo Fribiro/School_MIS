@@ -1,4 +1,5 @@
 import React from 'react'
+import SectionTwo from './SectionTwo'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -125,6 +126,8 @@ const Homepage = () => {
           </div>
           
       </SectionOneWrapper>
+    <SectionTwo/>
+
   )
 }
 
