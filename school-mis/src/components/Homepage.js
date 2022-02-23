@@ -1,4 +1,5 @@
 import React from 'react'
+import LoginPage from './auth/Login'
 import SectionOne from './SectionOne'
 import SectionTwo from './SectionTwo'
 
@@ -6,8 +7,9 @@ import SectionTwo from './SectionTwo'
 const Homepage = () => {
   return (
     <div>
-        <SectionOne />
-        <SectionTwo />
+        {/* <SectionOne />
+        <SectionTwo /> */}
+        <LoginPage/>
     </div>
   )
 }
