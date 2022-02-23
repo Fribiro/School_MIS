@@ -4,11 +4,16 @@ import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 
 library.add( faArrowRightLong )
 
+
 function App() {
   return (
     <div className="App">
+<<<<<<< HEAD
+     
+=======
       <Homepage/>
       
+>>>>>>> development
     </div>
   );
 }
