@@ -11,6 +11,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 4rem;
 }
 .container {
     width: 100%;
@@ -24,7 +25,7 @@ section {
 .left {
     width: 50%;
     height: 600px;
-    background: url(../../assets/images/jones5.jpg) ;
+    background: url(./images/pictures/jones5.jpg) ;
     border-radius: 8px;
 }
 .right{

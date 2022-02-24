@@ -37,5 +37,5 @@ const checkPasswordValidation = (e, value) => {
         return "Password must be 10-16 Characters Long.";
     }
 
-    setFormErrors({ [value]: error });
+    setFormErrors({ [value]});
 }

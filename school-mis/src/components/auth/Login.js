@@ -137,12 +137,9 @@ const LoginWrapper = styled.div`
 `
 
 const emailRegex = RegExp(
-    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+    /^[a-zaA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
-const pwdRegex = RegExp(
-    /^(?!.*\s)(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).{10,16}$/
-);
 
 const Login = () => {
     const [formErrors, setFormErrors] = useState({
@@ -152,37 +149,20 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
 
     const handleChange = (e) => {
-        e.preventDefault();
-        const { name, value ,strength} = e.target;
+        // e.preventDefault();
+        // const [ name, value ] = e.target;
+        const name = e.target.name;
+        const value = e.target.value;
         let error;
         switch (name) {
             case "email":
                 error = emailRegex.test(value) ? "" : "invalid email address";
-                break;
-            case "password":
-                // error = pwdRegex.test(value) ? "" : "minimum 6 characaters required";
-                switch (strength) {
-                    case "email":
-                        error = emailRegex.test(value) ? "" : "invalid email address";
-                        break;
-                    case "email":
-                        error = emailRegex.test(value.strength) ? "" : "invalid email address";
-                        break;
-                    case "email":
-                        error = emailRegex.test(value.strength) ? "" : "invalid email address";
-                        break;
-                    case "email":
-                        error = emailRegex.test(value.strength) ? "" : "invalid email address";
-                        break;
-                    case "email":
-                        error = emailRegex.test(value.strength) ? "" : "invalid email address";
-                        break;
-                    case "email":
-                        error = emailRegex.test(value.strength) ? "" : "invalid email address";
-                        break;
-                }
                 break;
             default:
                 break;
@@ -190,52 +170,57 @@ const Login = () => {
         setFormErrors({ [name]: error });
     };
 
-    const checkPasswordValidation = (e, value) => {
-        e.preventDefault();
-        let error;
+    const checkPasswordValidation = (e) => {
+        // e.preventDefault();
+        const { value } = e.target;
+        const paswdReg = { 
+            isWhitespace : /^(?=.*\s)/,
+            isContainsUppercase : /^(?=.*[A-Z])/,
+            isContainsLowercase : /^(?=.*[a-z])/,
+            isContainsNumber : /^(?=.*[0-9])/,
+            isContainsSymbol : /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/,
+            isValidLength : /^.{6,16}$/
+         }
 
-        const isWhitespace = /^(?=.*\s)/;
-        if (isWhitespace.test(value)) {
-            return "Password must not contain Whitespaces.";
-        }
+        if (value) {
 
+            let errors = []
 
-        const isContainsUppercase = /^(?=.*[A-Z])/;
-        if (!isContainsUppercase.test(value)) {
-            return "Password must have at least one Uppercase Character.";
-        }
+            if (paswdReg.isWhitespace.test(value)) {
+          
+                errors.push("Password must not contain Whitespaces.")
+            }
 
-
-        const isContainsLowercase = /^(?=.*[a-z])/;
-        if (!isContainsLowercase.test(value)) {
-            return "Password must have at least one Lowercase Character.";
-        }
-
-
-        const isContainsNumber = /^(?=.*[0-9])/;
-        if (!isContainsNumber.test(value)) {
-            return "Password must contain at least one Digit.";
-        }
+            if (!paswdReg.isContainsUppercase.test(value)) {
+                errors.push("Password must have at least one Uppercase Character.")
+            }
 
 
-        const isContainsSymbol =
-            /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/;
-        if (!isContainsSymbol.test(value)) {
-            return "Password must contain at least one Special Symbol.";
-        }
+            if (!paswdReg.isContainsLowercase.test(value)) {
+                errors.push("Password must have at least one Lowercase Character.");
+            }
 
+            if (!paswdReg.isContainsNumber.test(value)) {
+                errors.push("Password must contain at least one Digit.");
+            }
 
-        const isValidLength = /^.{10,16}$/;
-        if (!isValidLength.test(value)) {
-            return "Password must be 10-16 Characters Long.";
-        }
+            if (!paswdReg.isContainsSymbol.test(value)) {
+                errors.push("Password must contain at least one Special Symbol.");
+            }
 
-        setFormErrors({ [value]: error });
+            if (!paswdReg.isValidLength.test(value)) {
+                errors.push("Password must be 6-16 Characters Long.")
+            }
+    
+        setFormErrors({password:errors})
+        
+
     }
+}
 
     return (
         <LoginWrapper>
-            <form action="" className='form'>
+            <form onSubmit={handleSubmit} className='form'>
                 <img src="" alt="" />
                 <h2>Login</h2>
                 <div className="input-group">
@@ -258,19 +243,19 @@ const Login = () => {
                             setPassword(e.target.value);
                         }} />
                     <label htmlFor="login-password">Password</label>
-                    {formErrors.password && (
+                    {formErrors.password &&  formErrors.password.map((error)=>(
                         <small className="danger-error">
-                            {formErrors.password}
+                            {formErrors.password[0]}
                         </small>
-                    )}
+                    )) }
                 </div>
-                <input type="submit" value="Login" class="submit-btn" />
+                <input type="submit" value="Login" className="submit-btn" />
                 <a href="#forgot-pw" className='forgot-pw'>Forgot Password?</a>
             </form>
 
             <div className="forgot-pw">
-                <form action="" class="form">
-                    <a href="#" class="close">&times;</a>
+                <form action="" className="form">
+                    <a href="#" className="close">&times;</a>
                     <h2>Reset Password</h2>
                     <div className="input-group">
                         <input type="email" name="email" id="email" />
