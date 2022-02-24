@@ -3,7 +3,7 @@
 //import CallIcon from '@mui/icons-material/Call';
 import React from "react";
 import styled from "styled-components";
-
+//import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -70,10 +70,11 @@ const Navbar = () => {
           <Logo>akeo Group Of Schools</Logo>
         </Center>
         <Right>
+          
           <MenuItem>SIGN IN</MenuItem>
           <MenuItem>ADMISSION</MenuItem>
           <MenuItem>
-           
+         
             {/* <Badge badgeContent={4} color="primary">
               <ShoppingCartOutlined />
             </Badge> */}
