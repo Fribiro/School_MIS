@@ -15,16 +15,17 @@ const Container=styled.div`
 
 
 function Main() {
-  return (
-     <Router>
-         <TopBar></TopBar>
+  return (<>
+        <TopBar></TopBar>
       <Container>
            <SideBar></SideBar>
            <Dash></Dash>
         </Container>
-
-      </Router>
    
+
+
+        </>
+        
   )
 }
 

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
+import { Link } from "react-router-dom";
 
 const LoginWrapper = styled.div`
     width: 100%;
@@ -15,6 +16,7 @@ const LoginWrapper = styled.div`
         padding: 5rem 2.5rem 2.5rem;
         border-radius: 10px;
         color: #fff;
+        background: rgba(0,0,0,.7);
         box-shadow: 0 15px 25px rgba(0,0,0,0.5);
     }
 
@@ -25,7 +27,7 @@ const LoginWrapper = styled.div`
         left: 0;
         width: 50%;
         height: 100%;
-        background: rgba(255,255,255, .08);
+        /* background: rgba(255,255,255,.8); */
         transform: skewX(-26deg);
         transform-origin: bottom left;
         border-radius: 10px;
@@ -37,7 +39,7 @@ const LoginWrapper = styled.div`
         top: -50px;
         left: calc(50% - 50px);
         width: 100px;
-        background: rgba(255,255,255, .8);
+        background: rgb(255,255,255,);
         border-radius: 50%;
     }
 
@@ -75,7 +77,8 @@ const LoginWrapper = styled.div`
         transition: .3s ease-out;
     }
 
-    & .form .input-group input:focus + label, form .input-group input:valid + label  {
+    & .form .input-group input:focus + label, 
+       .form .input-group input:valid + label  {
         transform: translateY(-18px);
         color: #b6cb58;
         font-size: large.8rem;
@@ -128,41 +131,144 @@ const LoginWrapper = styled.div`
         text-decoration: none;
         color: inherit;
     }
+
+    & .danger-error {
+    color: #e74c3c;
+  }
 `
 
-const Login = () => {
-  return (
-      <LoginWrapper>
-          <form action="" className='form'>
-              <img src="" alt="" />
-              <h2>Login</h2>
-              <div className="input-group">
-                  <input type="email" name="email" id="login-email">
-                      <label htmlFor="login-email">Email</label>
-                  </input>
-              </div>
-              <div className="input-group">
-                  <input type="password" name="password" id="login-password">
-                      <label htmlFor="login-password">Password</label>
-                  </input>
-              </div>
-              <input type="submit" value="Login" class="submit-btn" />
-              <a href="#forgot-pw" className='forgot-pw'>Forgot Password?</a>
-          </form>
+const emailRegex = RegExp(
+    /^[a-zaA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
 
-          <div className="forgot-pw">
-              <form action="" class="form">
-                  <a href="#" class="close">&times;</a>
-                  <h2>Reset Password</h2>
-                  <div className="input-group">
-                      <input type="email" name="email" id="email" />
-                      <label htmlFor="email">Email</label>
-                  </div>
-                  <input type="submit" value="Submit" />
-              </form>
-          </div>
-      </LoginWrapper>
-  )
+
+const Login = () => {
+    const [formErrors, setFormErrors] = useState({
+        email: "",
+        password: "",
+    });
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+
+    const handleChange = (e) => {
+        // e.preventDefault();
+        // const [ name, value ] = e.target;
+        const name = e.target.name;
+        const value = e.target.value;
+        let error;
+        switch (name) {
+            case "email":
+                error = emailRegex.test(value) ? "" : "invalid email address";
+                break;
+            default:
+                break;
+        }
+        setFormErrors({ [name]: error });
+    };
+
+    const checkPasswordValidation = (e) => {
+        // e.preventDefault();
+        const { value } = e.target;
+        const paswdReg = { 
+            isWhitespace : /^(?=.*\s)/,
+            isContainsUppercase : /^(?=.*[A-Z])/,
+            isContainsLowercase : /^(?=.*[a-z])/,
+            isContainsNumber : /^(?=.*[0-9])/,
+            isContainsSymbol : /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹])/,
+            isValidLength : /^.{6,16}$/
+         }
+
+        if (value) {
+
+            let errors = []
+
+            if (paswdReg.isWhitespace.test(value)) {
+          
+                errors.push("Password must not contain Whitespaces.")
+            }
+
+            if (!paswdReg.isContainsUppercase.test(value)) {
+                errors.push("Password must have at least one Uppercase Character.")
+            }
+
+
+            if (!paswdReg.isContainsLowercase.test(value)) {
+                errors.push("Password must have at least one Lowercase Character.");
+            }
+
+            if (!paswdReg.isContainsNumber.test(value)) {
+                errors.push("Password must contain at least one Digit.");
+            }
+
+            if (!paswdReg.isContainsSymbol.test(value)) {
+                errors.push("Password must contain at least one Special Symbol.");
+            }
+
+            if (!paswdReg.isValidLength.test(value)) {
+                errors.push("Password must be 6-16 Characters Long.")
+            }
+    
+        setFormErrors({password:errors})
+        
+
+    }
+}
+
+    return (
+        <LoginWrapper>
+            <form onSubmit={handleSubmit} className='form'>
+                <img src="" alt="" />
+                <h2>Login</h2>
+                <div className="input-group">
+                    <input type="email" name="email" id="login-email" value={email}
+                        className={formErrors.email ? "error" : null}
+                        onChange={(e) => {
+                            handleChange(e);
+                            setEmail(e.target.value);
+                        }} />
+                    <label htmlFor="login-email">Email</label>
+                    {formErrors.email && (
+                        <small className="danger-error">{formErrors.email}</small>
+                    )}
+                </div>
+                <div className="input-group">
+                    <input type="password" name="password" id="login-password" value={password}
+                        className={formErrors.password ? "error" : null}
+                        onChange={(e) => {
+                            checkPasswordValidation(e);
+                            setPassword(e.target.value);
+                        }} />
+                    <label htmlFor="login-password">Password</label>
+                    {formErrors.password &&  formErrors.password.map((error)=>(
+                        <small className="danger-error">
+                            {formErrors.password[0]}
+                        </small>
+                    )) }
+                </div>
+                <Link  to="/main" >
+                    <input type="submit" value="Login" className="submit-btn" />
+                </Link>
+                <a href="#forgot-pw" className='forgot-pw'>Forgot Password?</a>
+            </form>
+
+            <div className="forgot-pw">
+                <form action="" className="form">
+                    <a href="#" className="close">&times;</a>
+                    <h2>Reset Password</h2>
+                    <div className="input-group">
+                        <input type="email" name="email" id="email" />
+                        <label htmlFor="email">Email</label>
+                    </div>
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+        </LoginWrapper>
+    )
 }
 
 export default Login

@@ -1,23 +1,24 @@
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
-import Homepage from './pages/Homepage';
-//import Main from './pages/Main';
+import { render } from "react-dom";
+import { BrowserRouter, Routes, Route, } from "react-router-dom";
+import Homepage from './components/Homepage';
+import Login from './components/auth/Login';
+import Main from './pages/Main'
 
+library.add(faArrowRightLong)
 
-library.add( faArrowRightLong )
 
 function App() {
   return (
-    <>
-    <Homepage/>
-    </>
-    
-     
-     
-     
-      
-  
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/main" element={<Main/>} />
+      </Routes>
+
+    </BrowserRouter>
   );
 }
 
