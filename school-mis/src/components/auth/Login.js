@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from "react-router-dom";
+// import userRoles from '../../dummyData'
 
 const LoginWrapper = styled.div`
     width: 100%;
@@ -142,6 +143,7 @@ const emailRegex = RegExp(
 );
 
 
+
 const Login = () => {
     const [formErrors, setFormErrors] = useState({
         email: "",
@@ -149,10 +151,28 @@ const Login = () => {
     });
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    // const [userRole, setUserRole] = useState(userRoles);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-    }
+    const userRoles = [
+        {
+          name : "Alvin",
+          email :  "alvin@gmail.com",
+          password : "Alvin1@",
+          role : "Admin"
+        },
+        {
+          name : "Salma",
+          email :  "salma@gmail.com",
+          password : "Salma1@",
+          role : "Teacher"
+        },
+        {
+          name : "Festus",
+          email :  "festus@gmail.com",
+          password : "Festus1@",
+          role : "Student"
+        }
+    ]
 
 
     const handleChange = (e) => {
@@ -217,11 +237,46 @@ const Login = () => {
         
 
     }
+
+    
 }
+async function handleSubmit(e) {
+    e.preventDefault();
+    const data = await fetch(userRoles);
+    const user = data.json()
+    
+    const { value } = e.target.result;
+
+    // if (value == userRole[0].email) {
+    //     if(userRole.role == "Admin") {
+    //         redirect('/admin')
+    //     }if(userRole.role == "Teachers") {
+    //         redirect('/teachers')
+    //     } else {
+    //         redirect('/students')
+    //     }
+    // }
+
+    // console.log(user);
+}
+console.log(userRoles);
+const value = "alvin@gmail.com";
+
+if (value == userRoles[0].email) {
+    
+    if(userRoles.role == "Admin") {
+        console.log('/admin')
+    }if(userRoles.role == "Teachers") {
+        console.log('/teachers')
+    } else {
+        console.log('/students')
+    }
+}
+
 
     return (
         <LoginWrapper>
-            <form onSubmit={handleSubmit} className='form'>
+            <form onSubmit={(e) => {handleSubmit(e)}} className='form'>
                 <img src="" alt="" />
                 <h2>Login</h2>
                 <div className="input-group">
@@ -250,7 +305,7 @@ const Login = () => {
                         </small>
                     )) }
                 </div>
-                <Link  to="/main" >
+                <Link  to="/student-dashboard" >
                     <input type="submit" value="Login" className="submit-btn" />
                 </Link>
                 <a href="#forgot-pw" className='forgot-pw'>Forgot Password?</a>

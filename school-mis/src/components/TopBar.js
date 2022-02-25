@@ -22,7 +22,7 @@ const Topbar =styled.div`
   `
   const Logo = styled.span`
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
     color: darkblue;
     cursor: pointer;
   `
@@ -65,7 +65,7 @@ function TopBar() {
     <Topbar>
         <TopbarWrapper>
             <TopLeft>
-                <Logo>akeo Admin</Logo>
+                <Logo>akeo Dashboard</Logo>
             </TopLeft>
             <TopRight>
                 <TopbarIconContainer>

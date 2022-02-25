@@ -1,16 +1,30 @@
 import React from 'react'
-import styled from 'styled-components'
-import DashboardNav from '../nav/DashboardNav'
 
-const AdminWrapper = styled.div`
+import styled from "styled-components";
+import { BrowserRouter as Router} from "react-router-dom";
+import TopBar from '../../components/TopBar'
+import AdminNav from './AdminNav';
+import AdminDash from './AdminDash';
 
+const Container=styled.div`
+    display: flex;
+    margin-top: 10px;
 `
+
+
+
+
 
 const AdminDashboard = () => {
   return (
-      <AdminWrapper>
-          <DashboardNav/>
-      </AdminWrapper>
+     <>
+      <TopBar></TopBar>
+      <Container>
+        <AdminNav></AdminNav>
+        <AdminDash></AdminDash>
+           
+        </Container>
+     </>
   )
 }
 
