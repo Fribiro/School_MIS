@@ -4,7 +4,8 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const SectionTwoWrapper = styled.div`
+const SectionTwoWrapper = styled.div
+`
 /*-------course -----*/
 .course{
     width: 100%;
@@ -173,11 +174,11 @@ html,body{
   }
 
   .pimg1{
-      background-image:url("pictures/school_4.jpg");
+      background-image:url("./pictures/school_4.jpg");
       height: 30vh;
   }
   .pimg2{
-      background-image: url("pictures/new_1.jpg");
+      background-image: url("./pictures/new_1.jpg");
       height: 40vh;
   }
 `
