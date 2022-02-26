@@ -44,7 +44,7 @@ const Feature = styled.div`
 
   .featuredIcon {
     font-size: 14px;
-    margin-left: 5px;
+    margin-left: 5px;ull8
     color: green;
   }
 
