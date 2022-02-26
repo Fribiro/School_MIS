@@ -1,12 +1,8 @@
+import React from "react";
+import styled from 'styled-components'
 
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-section {
+const SectionThreeWrapper = styled.div`
+    section {
     width: 100%;
     display: flex;
     align-items: center;
@@ -25,7 +21,7 @@ section {
 .left {
     width: 50%;
     height: 600px;
-    background: url(./images/pictures/jones5.jpg) ;
+    background: url(./images/jones5.jpg) ;
     border-radius: 8px;
 }
 .right{
@@ -95,4 +91,37 @@ section {
     .container{
         flex-direction: column;
     }
+}
+`
+
+export default function SectionThree() {
+    return (
+
+        <SectionThreeWrapper>
+            <section>
+                <div className="container">
+                    <div className="left"></div>
+                    <div className="right">
+                        <div className="content">
+                            <h2>Subscribe To Our Newsletter</h2>
+                            <p>Get Updates to news & events</p>
+                            <hr></hr>
+                            <h3>
+                                We offer high-quality education.
+                            </h3>
+                            <form action="#">
+                                <input
+                                    type="email"
+                                    name="email_address"
+                                    placeholder="Your Email Address"
+                                />
+                                <button type="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </SectionThreeWrapper>
+       
+    );
 }

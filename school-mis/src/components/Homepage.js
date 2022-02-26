@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import Slider from './Slider'
 import SectionOne from './SectionOne'
 import SectionTwo from './SectionTwo'
-import Nav from './subscribe'
+import SectionThree from './SectionThree'
 
 // //import Dash from "../pages/Dash"
 // import Main from "../pages/Main"
@@ -16,7 +16,7 @@ const Homepage = () => {
         <Slider />
         <SectionOne />
         <SectionTwo />
-        <Nav />
+        <SectionThree />
     </div>
   )
 }

@@ -1,7 +1,6 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Link } from "react-router-dom";
-// import userRoles from '../../dummyData'
+import { Redirect } from "react-router-dom";
 
 const LoginWrapper = styled.div`
     width: 100%;
@@ -138,7 +137,7 @@ const LoginWrapper = styled.div`
   }
 `
 
-const emailRegex = RegExp(
+const emailRegex = new RegExp(
     /^[a-zaA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
 );
 
@@ -274,9 +273,69 @@ if (value == userRoles[0].email) {
 }
 
 
+// const userRoles = [
+//     {   name : "Festus",
+//         email : "fes@gmail.com",
+//         password : "Fes12#",
+//         role : "Admin"
+//     },
+//     {
+//         name: "Alvin",
+//         email: "alv@gmail.com",
+//         password: "Alv12#",
+//         role: "Teacher"
+//     },
+//     {
+//         name: "Salma",
+//         email: "salma@gmail.com",
+//         password: "Sal12#",
+//         role: "Student"
+//     },
+//     {
+//         name: "John",
+//         email: "john@gmail.com",
+//         password: "Joh12#",
+//         role: "Student"
+//     }
+// ]
+
+
+    const handleLogin = (e) => {
+        //e.preventDefault();
+
+        //console.log(userRoles);
+        const user = { email };
+        console.log(user)
+        let person;
+
+        for (person of userRoles) {
+            //console.log(person.role);
+
+            if (user.email == person.email) {
+                //console.log(person.role);
+                if (person.role == "Admin") {
+                    alert('Admin Page');
+
+                }
+                if (person.role == "Teacher") {
+                    alert('Teachers Page');
+
+                }
+                if (person.role == "Student") {
+                    alert('Students Page');
+
+                }
+            }
+
+        }
+
+    }
+
+
+
     return (
         <LoginWrapper>
-            <form onSubmit={(e) => {handleSubmit(e)}} className='form'>
+            <form onSubmit={handleLogin} className='form'>
                 <img src="" alt="" />
                 <h2>Login</h2>
                 <div className="input-group">
@@ -319,7 +378,7 @@ if (value == userRoles[0].email) {
                         <input type="email" name="email" id="email" />
                         <label htmlFor="email">Email</label>
                     </div>
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Submit" onClick={handleLogin} />
                 </form>
             </div>
         </LoginWrapper>
@@ -327,3 +386,4 @@ if (value == userRoles[0].email) {
 }
 
 export default Login
+
