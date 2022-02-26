@@ -1,16 +1,26 @@
 import React from 'react'
 import styled from 'styled-components'
-import DashboardNav from '../nav/DashboardNav'
+import TopBar from '../../components/TopBar'
+import TrDash from './TrDash'
+import TrNav from './TrNav'
 
-const TeachersWrapper = styled.div`
 
+const Container=styled.div`
+    display: flex;
+    margin-top: 10px;
 `
 
 const TeachersDashboard = () => {
   return (
-    <TeachersWrapper>
-        <DashboardNav/>
-    </TeachersWrapper>
+    <>
+    <TopBar/>
+    
+    <Container>
+       <TrNav/>
+    
+       <TrDash/>
+    </Container>
+    </>
   )
 }
 
