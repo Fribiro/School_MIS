@@ -1,6 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
-import {render } from "react-dom"
+// import {render } from "react-dom"
 import { BrowserRouter, Routes, Route, } from "react-router-dom";
 import Homepage from './components/Homepage';
 import Login from './components/auth/Login';
@@ -29,3 +29,4 @@ function App() {
 }
 
 export default App;
+
