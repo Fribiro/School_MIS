@@ -14,6 +14,9 @@ const SectionTwoWrapper = styled.div
     padding-top: 100px;
     background-color: #2c3e50;
     color:#ddd;
+    display: block;
+    justify-content: center;
+    align-items: center;
    
 }
 h2{
@@ -29,6 +32,11 @@ h2{
     font-weight: 300;
     line-height: 22px;
     padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 14rem;
 }
 p{
     color: gray;
@@ -38,17 +46,27 @@ p{
     padding: 10px;
 
 }
-.row{
-    margin-top: 5%;
+
+.card-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.row{
+    margin: 1rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    width: 75%;
 }
 .course-col{
-    flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin: 1rem 1rem;
+    width: 33%;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
@@ -57,6 +75,7 @@ h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0;
+    color: #333;
 }
 .course-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
@@ -86,6 +105,9 @@ text-align: center;
 padding-top: 100px;
 background-color: #2c3e50;
 color:#ddd;
+display: block;
+justify-content: center;
+align-items: center;
 
 }
 .slider{
@@ -174,199 +196,201 @@ html,body{
   }
 
   .pimg1{
-      background-image:url("./pictures/school_4.jpg");
+      background: url(./images/school_4.jpg);
       height: 30vh;
   }
   .pimg2{
-      background-image: url("./pictures/new_1.jpg");
+      background: url(./images/school_4.jpg);
       height: 40vh;
   }
 `
 
 const SectionTwo = () => {
     // $(".slider").owlCarousel({
-        
+
     // })
 
-  return (
-    <SectionTwoWrapper>
-    <div class="pimg1">
-        <div class="ptext">
-            <span class="border">
-                
-            </span>
-        </div>
-    </div>
+    return (
+        <SectionTwoWrapper>
+            <div class="pimg1">
+                <div class="ptext">
+                    <span class="border">
 
-    <section class="course">
-        
-        <h2>Courses We Offer</h2>
-        <p class="cardp">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <div class="row">
-            <div class="course-col">
+                    </span>
+                </div>
+            </div>
 
-                <h3>
-                    intermediate
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            <section class="course">
+
+                <h2>Courses We Offer</h2>
+                <p class="cardp">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-            </div>
-            <div class="course-col">
+                <div className="card-container">
+                    <div class="row">
+                        <div class="course-col">
 
-                <h3>
-                    Academy
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            <h3>
+                                intermediate
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="course-col">
+
+                            <h3>
+                                Academy
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                        <div class="course-col">
+
+                            <h3>
+                                Secondary
+                            </h3>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <div class="pimg2">
+                <div class="ptext">
+                    <span class="border">
+
+                    </span>
+                </div>
+            </div>
+
+            <section class="facilities">
+                <h2> Our News</h2>
+                <p class="cardp">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-            </div>
-            <div class="course-col">
+                <OwlCarousel class="slider owl-carousel owl-theme">
+                    <div class="card item">
+                        <div class="img"><img src="../assets/images/pictures/111.jpg" alt="" /></div>
+                        <div class="content">
+                            <div class="title"> Trial</div>
+                            <div class="sub-title"> Dev trial</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="btn">
+                                <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card item">
+                        <div class="img"><img src="pictures/111.jpg" alt="" /></div>
+                        <div class="content">
+                            <div class="title"> Trial</div>
+                            <div class="sub-title"> Dev trial</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="btn">
+                                <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                            </div>
+                        </div>
 
-                <h3>
-                    Secondary
-                </h3>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </div>
-    
-    </section>
+                    </div>
+                    <div class="card item">
+                        <div class="img"><img src="pictures/111.jpg" alt="" /></div>
+                        <div class="content">
+                            <div class="title"> Trial</div>
+                            <div class="sub-title"> Dev trial</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="btn">
+                                <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                            </div>
+                        </div>
 
-    <div class="pimg2">
-        <div class="ptext">
-            <span class="border">
-                
-            </span>
-        </div>
-    </div>
+                    </div>
+                    <div class="card item">
+                        <div class="img"><img src="pictures/111.jpg" alt="" /></div>
+                        <div class="content">
+                            <div class="title"> Trial</div>
+                            <div class="sub-title"> Dev trial</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="btn">
+                                <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                            </div>
+                        </div>
 
-    <section class="facilities">
-        <h2> Our News</h2>
-        <p class="cardp"> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <OwlCarousel class="slider owl-carousel owl-theme">
-            <div class="card item">
-                <div class="img"><img src="pictures/111.jpg" alt=""/></div>
-                    <div class="content">
-                        <div class="title"> Trial</div>
-                        <div class="sub-title"> Dev trial</div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="btn">
-                            <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
-                        </div>
                     </div>
-            </div>
-            <div class="card item">
-                <div class="img"><img src="pictures/111.jpg" alt=""/></div>
-                    <div class="content">
-                        <div class="title"> Trial</div>
-                        <div class="sub-title"> Dev trial</div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="btn">
-                            <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                    <div class="card item">
+                        <div class="img"><img src="pictures/111.jpg" alt="" /></div>
+                        <div class="content">
+                            <div class="title"> Trial</div>
+                            <div class="sub-title"> Dev trial</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="btn">
+                                <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                            </div>
                         </div>
+
                     </div>
-                
-            </div>
-            <div class="card item">
-                <div class="img"><img src="pictures/111.jpg" alt=""/></div>
-                    <div class="content">
-                        <div class="title"> Trial</div>
-                        <div class="sub-title"> Dev trial</div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="btn">
-                            <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                    <div class="card item">
+                        <div class="img"><img src="pictures/111.jpg" alt="" /></div>
+                        <div class="content">
+                            <div class="title"> Trial</div>
+                            <div class="sub-title"> Dev trial</div>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <div class="btn">
+                                <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
+                            </div>
                         </div>
+
                     </div>
-                
-            </div>
-            <div class="card item">
-                <div class="img"><img src="pictures/111.jpg" alt=""/></div>
-                    <div class="content">
-                        <div class="title"> Trial</div>
-                        <div class="sub-title"> Dev trial</div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="btn">
-                            <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
-                        </div>
-                    </div>
-                
-            </div>
-            <div class="card item">
-                <div class="img"><img src="pictures/111.jpg" alt=""/></div>
-                    <div class="content">
-                        <div class="title"> Trial</div>
-                        <div class="sub-title"> Dev trial</div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="btn">
-                            <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
-                        </div>
-                    </div>
-                
-            </div>
-            <div class="card item">
-                <div class="img"><img src="pictures/111.jpg" alt=""/></div>
-                    <div class="content">
-                        <div class="title"> Trial</div>
-                        <div class="sub-title"> Dev trial</div>
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <div class="btn">
-                            <button><a href="https://www.w3schools.com/" target="_blank">Read more!</a></button>
-                        </div>
-                    </div>
-                
-            </div>
-        </OwlCarousel>
-        {/* <script>
+                </OwlCarousel>
+                {/* <script>
             $(".slider").owlCarousel({
                 loop : true,
                 autoplay : true,
@@ -374,10 +398,10 @@ const SectionTwo = () => {
                 autoplayHoverPause : true,
             })
         </script> */}
-    </section>
+            </section>
 
-    </SectionTwoWrapper>
-  )
+        </SectionTwoWrapper>
+    )
 }
 
 export default SectionTwo
