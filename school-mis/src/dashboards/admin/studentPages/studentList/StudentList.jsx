@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 
-export default function UserList() {
+export default function StudentList() {
   const [data, setData] = useState(studentRows);
 
   const handleDelete = (id) => {
