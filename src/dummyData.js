@@ -1,51 +1,51 @@
-export const userData = [
+export const performanceData = [
     {
       name: "Jan",
-      "Active User": 4000,
+      "performace": 4000,
     },
     {
       name: "Feb",
-      "Active User": 3000,
+      "performace": 3000,
     },
     {
       name: "Mar",
-      "Active User": 5000,
+      "performace": 5000,
     },
     {
       name: "Apr",
-      "Active User": 4000,
+      "performace": 4000,
     },
     {
       name: "May",
-      "Active User": 3000,
+      "performace": 3000,
     },
     {
       name: "Jun",
-      "Active User": 2000,
+      "performace": 2000,
     },
     {
       name: "Jul",
-      "Active User": 4000,
+      "performace": 4000,
     },
     {
       name: "Agu",
-      "Active User": 3000,
+      "performace": 3000,
     },
     {
       name: "Sep",
-      "Active User": 4000,
+      "performace": 4000,
     },
     {
       name: "Oct",
-      "Active User": 1000,
+      "performace": 1000,
     },
     {
       name: "Nov",
-      "Active User": 4000,
+      "performace": 4000,
     },
     {
       name: "Dec",
-      "Active User": 3000,
+      "performace": 3000,
     },
   ];
 
@@ -72,7 +72,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 2,
@@ -81,7 +81,8 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
+     
     },
     {
       id: 3,
@@ -90,7 +91,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 4,
@@ -99,7 +100,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 5,
@@ -108,7 +109,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 6,
@@ -117,7 +118,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 7,
@@ -126,7 +127,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 8,
@@ -135,7 +136,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 9,
@@ -144,7 +145,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
     {
       id: 10,
@@ -153,7 +154,7 @@ export const userData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      transaction: "$120.00",
+      grade: "200",
     },
   ];
 

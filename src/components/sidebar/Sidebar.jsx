@@ -4,7 +4,7 @@ import {
   Timeline,
   TrendingUp,
   PermIdentity,
-  Storefront,
+  MenuBookOutlined ,
   AttachMoney,
   BarChart,
   MailOutline,
@@ -20,7 +20,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Dashboard</h3>
+          <h3 className="sidebarTitle">Admin Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
             <li className="sidebarListItem active">
@@ -32,10 +32,7 @@ export default function Sidebar() {
               <Timeline className="sidebarIcon" />
               Analytics
             </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
-              Sales
-            </li>
+            
           </ul>
         </div>
         <div className="sidebarMenu">
@@ -44,18 +41,18 @@ export default function Sidebar() {
             <Link to="/users" className="link">
               <li className="sidebarListItem">
                 <PermIdentity className="sidebarIcon" />
-                Users
+                students
               </li>
             </Link>
             <Link to="/products" className="link">
               <li className="sidebarListItem">
-                <Storefront className="sidebarIcon" />
-                Products
+                < PermIdentity className="sidebarIcon" />
+                teachers
               </li>
             </Link>
             <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
+              <MenuBookOutlined  className="sidebarIcon" />
+              courses
             </li>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />
