@@ -250,3 +250,105 @@ export const performanceData = [
         students: "12000",
     },
   ];
+
+  export const studentData = [
+    {
+      name: "Jan",
+      "Marks": 4000,
+    },
+    {
+      name: "Feb",
+      " Marks": 3000,
+    },
+    {
+      name: "Mar",
+      "Marks ": 5000,
+    },
+    {
+      name: "Apr",
+      "Marks": 4000,
+    },
+    {
+      name: "May",
+      "Marks": 3000,
+    },
+    {
+      name: "Jun",
+      "Marks": 2000,
+    },
+    {
+      name: "Jul",
+      "Marks": 4000,
+    },
+    {
+      name: "Agu",
+      "Marks": 3000,
+    },
+    {
+      name: "Sep",
+      "Marks": 4000,
+    },
+    {
+      name: "Oct",
+      "Marks": 1000,
+    },
+    {
+      name: "Nov",
+      "Marks": 4000,
+    },
+    {
+      name: "Dec",
+      "Marks": 3000,
+    },
+  ];
+
+  export const teacherData = [
+    {
+      name: "Jan",
+      "Courses": 4000,
+    },
+    {
+      name: "Feb",
+      " Courses": 3000,
+    },
+    {
+      name: "Mar",
+      "Courses ": 5000,
+    },
+    {
+      name: "Apr",
+      "Courses": 4000,
+    },
+    {
+      name: "May",
+      "Courses": 3000,
+    },
+    {
+      name: "Jun",
+      "Courses": 2000,
+    },
+    {
+      name: "Jul",
+      "Courses": 4000,
+    },
+    {
+      name: "Agu",
+      "Courses": 3000,
+    },
+    {
+      name: "Sep",
+      "Courses": 4000,
+    },
+    {
+      name: "Oct",
+      "Courses": 1000,
+    },
+    {
+      name: "Nov",
+      "Courses": 4000,
+    },
+    {
+      name: "Dec",
+      "Courses": 3000,
+    },
+  ];
