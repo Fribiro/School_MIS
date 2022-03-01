@@ -4,7 +4,8 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const SectionTwoWrapper = styled.div`
+const SectionTwoWrapper = styled.div
+`
 /*-------course -----*/
 .course{
     width: 100%;
@@ -205,9 +206,6 @@ html,body{
 `
 
 const SectionTwo = () => {
-    // $(".slider").owlCarousel({
-
-    // })
 
     return (
         <SectionTwoWrapper>
@@ -294,7 +292,9 @@ const SectionTwo = () => {
                 </p>
                 <OwlCarousel class="slider owl-carousel owl-theme">
                     <div class="card item">
-                        <div class="img"><img src="../assets/images/pictures/111.jpg" alt="" /></div>
+                        <div class="img">
+                            <img src="../assets/images/pictures/111.jpg" alt="" />
+                        </div>
                         <div class="content">
                             <div class="title"> Trial</div>
                             <div class="sub-title"> Dev trial</div>
