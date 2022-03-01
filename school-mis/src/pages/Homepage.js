@@ -1,13 +1,18 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Slider from '../components/Slider'
-
+import Main from './Main'
+// import Navbar from '../components/Navbar'
+// import Slider from '../components/Slider'
+// import SectionOne from '../components/SectionOne'
+// import SectionTwo from '../components/SectionTwo'
 const Homepage = () => {
   return (
     <div>
-      <Navbar></Navbar>
-      <Slider></Slider>
-
+      <Main></Main>
+      {/* <Navbar/>
+      <Slider/>
+      <SectionOne />
+      <SectionTwo /> 
+      */}
     </div>
   )
 }

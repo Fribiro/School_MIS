@@ -206,9 +206,6 @@ html,body{
 `
 
 const SectionTwo = () => {
-    // $(".slider").owlCarousel({
-
-    // })
 
     return (
         <SectionTwoWrapper>
@@ -295,7 +292,9 @@ const SectionTwo = () => {
                 </p>
                 <OwlCarousel class="slider owl-carousel owl-theme">
                     <div class="card item">
-                        <div class="img"><img src="../assets/images/pictures/111.jpg" alt="" /></div>
+                        <div class="img">
+                            <img src="../assets/images/pictures/111.jpg" alt="" />
+                        </div>
                         <div class="content">
                             <div class="title"> Trial</div>
                             <div class="sub-title"> Dev trial</div>
