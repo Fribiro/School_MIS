@@ -1,7 +1,7 @@
 import "./StudentList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
-import { studentRows } from "../../dummyData";
+import { studentRows } from "../../../";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
