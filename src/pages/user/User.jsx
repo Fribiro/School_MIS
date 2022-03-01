@@ -13,7 +13,7 @@ export default function User() {
   return (
     <div className="user">
       <div className="userTitleContainer">
-        <h1 className="userTitle">Edit User</h1>
+        <h1 className="userTitle">Edit Student</h1>
         <Link to="/newUser">
           <button className="userAddButton">Create</button>
         </Link>
@@ -28,7 +28,7 @@ export default function User() {
             />
             <div className="userShowTopTitle">
               <span className="userShowUsername">Anna Becker</span>
-              <span className="userShowUserTitle">Software Engineer</span>
+              <span className="userShowUserTitle">form iv</span>
             </div>
           </div>
           <div className="userShowBottom">

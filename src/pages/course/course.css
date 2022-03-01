@@ -1,15 +1,15 @@
-.product {
+.course{
   flex: 4;
   padding: 20px;
 }
 
-.productTitleContainer {
+.courseTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.productAddButton {
+.courseAddButton {
   width: 80px;
   border: none;
   padding: 5px;
@@ -20,23 +20,23 @@
   cursor: pointer;
 }
 
-.productTop {
+.courseTop {
   display: flex;
 }
 
-.productTopLeft,
-.productTopRight {
+.courseTopLeft,
+.courseTopRight {
   flex: 1;
 }
 
-.productTopRight {
+.courseTopRight {
   padding: 20px;
   margin: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
-.productInfoImg {
+.courseInfoImg {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -44,37 +44,37 @@
   margin-right: 20px;
 }
 
-.productInfoTop {
+.courseInfoTop {
   display: flex;
   align-items: center;
 }
 
-.productName {
+.courseName {
   font-weight: 600;
 }
 
-.productInfoBottom {
+.courseInfoBottom {
   margin-top: 10px;
 }
 
-.productInfoItem {
+.courseInfoItem {
   width: 150px;
   display: flex;
   justify-content: space-between;
 }
 
-.productInfoValue {
+.courseInfoValue {
   font-weight: 300;
 }
 
-.productBottom {
+.courseBottom {
   padding: 20px;
   margin: 20px;
   -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
 }
 
-.productForm {
+/* .productForm {
   display: flex;
   justify-content: space-between;
 }
@@ -127,4 +127,4 @@
   color:white;
   font-weight: 600;
   cursor: pointer;
-}
+} */

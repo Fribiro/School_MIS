@@ -2,10 +2,8 @@ import "./sidebar.css";
 import {
   LineStyle,
   Timeline,
-  TrendingUp,
   PermIdentity,
   MenuBookOutlined ,
-  AttachMoney,
   BarChart,
   MailOutline,
   DynamicFeed,
@@ -46,13 +44,13 @@ export default function Sidebar() {
             </Link>
             <Link to="/products" className="link">
               <li className="sidebarListItem">
-                < PermIdentity className="sidebarIcon" />
-                teachers
+                < MenuBookOutlined  className="sidebarIcon" />
+                course
               </li>
             </Link>
             <li className="sidebarListItem">
-              <MenuBookOutlined  className="sidebarIcon" />
-              courses
+              <PermIdentity className="sidebarIcon" />
+              teachers
             </li>
             <li className="sidebarListItem">
               <BarChart className="sidebarIcon" />

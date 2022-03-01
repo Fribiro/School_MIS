@@ -1,48 +1,48 @@
 import { Link } from "react-router-dom";
-import "./product.css";
+import "./course.css";
 import Chart from "../../components/chart/Chart"
 import {productData} from "../../dummyData"
 import { Publish } from "@material-ui/icons";
 
-export default function Product() {
+export default function Course() {
   return (
-    <div className="product">
-      <div className="productTitleContainer">
-        <h1 className="productTitle">Product</h1>
+    <div className="course">
+      <div className="courseTitleContainer">
+        <h1 className="courseTitle">COURSE</h1>
         <Link to="/newproduct">
-          <button className="productAddButton">Create</button>
+          <button className="courseAddButton">Create</button>
         </Link>
       </div>
-      <div className="productTop">
-          <div className="productTopLeft">
-              <Chart data={productData} dataKey="Sales" title="Sales Performance"/>
+      <div className="courseTop">
+          <div className="courseTopLeft">
+              <Chart data={productData} dataKey="course" title="Course Performance"/>
           </div>
-          <div className="productTopRight">
-              <div className="productInfoTop">
-                  <img src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="productInfoImg" />
-                  <span className="productName">Apple Airpods</span>
+          <div className="courseTopRight">
+              <div className="courseInfoTop">
+                  <img src="https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" className="courseInfoImg" />
+                  <span className="courseName">Biology</span>
               </div>
-              <div className="productInfoBottom">
-                  <div className="productInfoItem">
-                      <span className="productInfoKey">id:</span>
-                      <span className="productInfoValue">123</span>
+              <div className="courseInfoBottom">
+                  <div className="courseInfoItem">
+                      <span className="courseInfoKey">Name:</span>
+                      <span className="courseInfoValue">BIOLOGY</span>
                   </div>
-                  <div className="productInfoItem">
-                      <span className="productInfoKey">sales:</span>
-                      <span className="productInfoValue">5123</span>
+                  <div className="courseInfoItem">
+                      <span className="courseInfoKey">Students:</span>
+                      <span className="courseInfoValue">5123</span>
                   </div>
-                  <div className="productInfoItem">
-                      <span className="productInfoKey">active:</span>
-                      <span className="productInfoValue">yes</span>
+                  {/* <div className="courseInfoItem">
+                      <span className="courseInfoKey">active:</span>
+                      <span className="courseInfoValue">yes</span>
                   </div>
-                  <div className="productInfoItem">
-                      <span className="productInfoKey">in stock:</span>
-                      <span className="productInfoValue">no</span>
-                  </div>
+                  <div className="courseInfoItem">
+                      <span className="courseInfoKey">in stock:</span>
+                      <span className="courseInfoValue">no</span>
+                  </div> */}
               </div>
           </div>
       </div>
-      <div className="productBottom">
+      {/* <div className="productBottom">
           <form className="productForm">
               <div className="productFormLeft">
                   <label>Product Name</label>
@@ -69,7 +69,7 @@ export default function Product() {
                   <button className="productButton">Update</button>
               </div>
           </form>
-      </div>
+      </div> */}
     </div>
   );
 }

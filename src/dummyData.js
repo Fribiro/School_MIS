@@ -52,15 +52,15 @@ export const performanceData = [
   export const productData = [
     {
       name: "Jan",
-      "Sales": 4000,
+      "course": 4000,
     },
     {
       name: "Feb",
-      "Sales": 3000,
+      "course": 3000,
     },
     {
       name: "Mar",
-      "Sales": 5000,
+      "course": 5000,
     },
   ];
 
@@ -72,7 +72,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "A",
     },
     {
       id: 2,
@@ -81,7 +81,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "B",
      
     },
     {
@@ -91,7 +91,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "A+",
     },
     {
       id: 4,
@@ -100,7 +100,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "C+",
     },
     {
       id: 5,
@@ -109,7 +109,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "C-",
     },
     {
       id: 6,
@@ -118,7 +118,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "B+",
     },
     {
       id: 7,
@@ -127,7 +127,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "A-",
     },
     {
       id: 8,
@@ -136,7 +136,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "B",
     },
     {
       id: 9,
@@ -145,7 +145,7 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "C+",
     },
     {
       id: 10,
@@ -154,99 +154,99 @@ export const performanceData = [
         "https://images.pexels.com/photos/1152994/pexels-photo-1152994.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "jon@gmail.com",
       status: "active",
-      grade: "200",
+      grade: "B+",
     },
   ];
 
-  export const productRows = [
+  export const courseRows = [
     {
       id: 1,
-      name: "Apple Airpods",
+      name: "English",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
+      classes: 123,
       status: "active",
-      price: "$120.00",
+      students: "12000",
     },
     {
       id: 2,
-      name: "Apple Airpods",
+      name: "Chemistry",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
     {
       id: 3,
-      name: "Apple Airpods",
+      name: "History",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
+     classes: 123,
       status: "active",
-      price: "$120.00",
+      students: "12000",
     },
     {
       id: 4,
-      name: "Apple Airpods",
+      name: "Geography",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
     {
       id: 5,
-      name: "Apple Airpods",
+      name: "Relegious Education",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
     {
       id: 6,
-      name: "Apple Airpods",
+      name: "Aviation",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
     {
       id: 7,
-      name: "Apple Airpods",
+      name: "Computer Studies",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
     {
       id: 8,
-      name: "Apple Airpods",
+      name: "Agriculture",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
     {
       id: 9,
-      name: "Apple Airpods",
+      name: "Physics",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
     {
       id: 10,
-      name: "Apple Airpods",
+      name: "Kiswahili",
       img:
         "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      stock: 123,
-      status: "active",
-      price: "$120.00",
+        classes: 123,
+        status: "active",
+        students: "12000",
     },
   ];
