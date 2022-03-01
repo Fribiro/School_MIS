@@ -6,6 +6,13 @@ import Homepage from './components/Homepage';
 import Login from './components/auth/Login';
 //import AdminDashboard from './dashboards/admin/AdminDashboard'
 import StudentsDashboard from './dashboards/students/StudentsDashboard';
+import StudentList from "./pages/studentList/StudentList";
+import Student from "./pages/student/Student";
+import NewStudent from "./pages/newStudent/newStudent";
+
+import NewReports from "./pages/newReports/newReports";
+import StudentReport from "./pages/StudentReport/StudentReport";
+import StudentsReportsList from "./pages/StudentsReportsList/StudentsReportsList";
 
 //import TeachersDashboard from './dashboards/teachers/TeachersDashboard'
 
