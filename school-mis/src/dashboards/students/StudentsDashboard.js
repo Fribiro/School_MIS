@@ -1,16 +1,25 @@
 import React from 'react'
-import styled from 'styled-components'
-import DashboardNav from '../nav/DashboardNav'
+import styled from "styled-components";
+import TopBar from '../../components/TopBar'
 
-const StudentsWrapper = styled.div`
 
+import StudNav from '../students/StudNav'
+import StudDash from '../students/StudDash'
+
+const Container=styled.div`
+    display: flex;
+    margin-top: 10px;
 `
-
-const StudentsDashboard = () => {
+function StudentsDashboard() {
   return (
-    <StudentsWrapper>
-        <DashboardNav/>
-    </StudentsWrapper>
+    <>
+    <TopBar/>
+    <Container>
+       <StudNav/>
+    
+       <StudDash/>
+    </Container>
+    </>
   )
 }
 
