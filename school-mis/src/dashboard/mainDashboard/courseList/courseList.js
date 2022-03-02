@@ -1,43 +1,42 @@
-import "./StudentList.css";
+import "./courseList.style.js";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
-import { studentRows } from "../../../../dummyData";
+import { courseRows } from "../../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { CourseWrapper } from "./courseList.style.js";
 
+export default function CourseList() {
+  const [data, setData] = useState(courseRows);
 
-export default function StudentList() {
-  const [data, setData] = useState(studentRows);
-  console.log(data);
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
-    console.log(data);
   };
-  
+
   const columns = [
     { field: "id", headerName: "ID", width: 90 },
     {
-      field: "user",
-      headerName: "User",
+      field: "course",
+      headerName: "Course",
       width: 200,
       renderCell: (params) => {
         return (
-          <div className="userListUser">
-            {/* <img className="userListImg" src={params.row.avatar} alt="" /> */}
-            {params.row.id}
+          <div className="courseListItem">
+            <img className="courseListImg" src={params.row.img} alt="" />
+            {params.row.name}
           </div>
         );
       },
     },
-    { field: "email", headerName: "Email", width: 200 },
+    { field: "classes", headerName: "Classes", width: 200 },
     {
       field: "status",
       headerName: "Status",
       width: 120,
     },
     {
-      field: "result",
-      headerName: "Report",
+      field: "students",
+      headerName: "Students",
       width: 160,
     },
     {
@@ -47,11 +46,11 @@ export default function StudentList() {
       renderCell: (params) => {
         return (
           <>
-            <Link to={"/students/" + params.row.id}>
-              <button className="userListEdit">Edit</button>
+            <Link to={"/product/" + params.row.id}>
+              <button className="courseListEdit">Edit</button>
             </Link>
             <DeleteOutline
-              className="userListDelete"
+              className="courseListDelete"
               onClick={() => handleDelete(params.row.id)}
             />
           </>
@@ -61,24 +60,14 @@ export default function StudentList() {
   ];
 
   return (
-    <div className="userList">
+    <CourseWrapper>
       <DataGrid
         rows={data}
         disableSelectionOnClick
         columns={columns}
-        
-        //checkboxSelection
+        pageSize={8}
+        checkboxSelection
       />
-    </div>
+    </CourseWrapper>
   );
 }
-
-
-
-
-
-
-
-
-
-

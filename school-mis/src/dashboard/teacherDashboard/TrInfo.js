@@ -1,4 +1,3 @@
-
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 import React from "react";
 
@@ -44,7 +43,7 @@ const Feature = styled.div`
 
   .featuredIcon {
     font-size: 14px;
-    margin-left: 5px;ull8
+    margin-left: 5px;
     color: green;
   }
 
@@ -57,15 +56,15 @@ const Feature = styled.div`
     color: gray;
   }
 `;
-function StudInfo() {
+
+function TrInfo() {
   return (
     <>
     <Feature>
       <div className="featuredItem">
-        <span className="featuredTitle">My 
-        Attendance</span>
+        <span className="featuredTitle">No of Students</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">63%</span>
+          <span className="featuredMoney">125</span>
           <span className="featuredMoneyRate">
             -11.4 <ArrowDownward className="featuredIcon negative" />
           </span>
@@ -73,28 +72,28 @@ function StudInfo() {
         <span className="featuredSub">Compared to last month</span>
       </div>
       <div className="featuredItem">
-        <span className="featuredTitle">Grades</span>
+        <span className="featuredTitle">Perfomance</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">2.4 GPA</span>
+          <span className="featuredMoney">78%</span>
           <span className="featuredMoneyRate">
             -1.4 <ArrowDownward className="featuredIcon negative" />
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
       </div>
-      {/* <div className="featuredItem">
-        <span className="featuredTitle">Courses</span>
+      <div className="featuredItem">
+        <span className="featuredTitle">Overall Attendance</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">115</span>
+          <span className="featuredMoney">82%</span>
           <span className="featuredMoneyRate">
             +2.4 <ArrowUpward className="featuredIcon" />
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
-      </div> */}
+      </div>
     </Feature>
     </>
   )
 }
 
-export default StudInfo
+export default TrInfo

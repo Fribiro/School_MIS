@@ -1,6 +1,4 @@
 
-
-
 import { ArrowDownward, ArrowUpward } from "@material-ui/icons";
 import React from "react";
 
@@ -59,15 +57,15 @@ const Feature = styled.div`
     color: gray;
   }
 `;
-
-function TrInfo() {
+function StudInfo() {
   return (
     <>
     <Feature>
       <div className="featuredItem">
-        <span className="featuredTitle">No of Students</span>
+        <span className="featuredTitle">My 
+        Attendance</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">125</span>
+          <span className="featuredMoney">63%</span>
           <span className="featuredMoneyRate">
             -11.4 <ArrowDownward className="featuredIcon negative" />
           </span>
@@ -75,28 +73,28 @@ function TrInfo() {
         <span className="featuredSub">Compared to last month</span>
       </div>
       <div className="featuredItem">
-        <span className="featuredTitle">Perfomance</span>
+        <span className="featuredTitle">Grades</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">78%</span>
+          <span className="featuredMoney">2.4 GPA</span>
           <span className="featuredMoneyRate">
             -1.4 <ArrowDownward className="featuredIcon negative" />
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
       </div>
-      <div className="featuredItem">
-        <span className="featuredTitle">Overall Attendance</span>
+      {/* <div className="featuredItem">
+        <span className="featuredTitle">Courses</span>
         <div className="featuredMoneyContainer">
-          <span className="featuredMoney">82%</span>
+          <span className="featuredMoney">115</span>
           <span className="featuredMoneyRate">
             +2.4 <ArrowUpward className="featuredIcon" />
           </span>
         </div>
         <span className="featuredSub">Compared to last month</span>
-      </div>
+      </div> */}
     </Feature>
     </>
   )
 }
 
-export default TrInfo
+export default StudInfo

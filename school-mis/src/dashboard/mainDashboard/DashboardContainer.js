@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import AdminDash from '../../dashboards/admin/AdminDash';
-import StudentList from '../../dashboards/admin/studentPages/studentList/StudentList';
 import { DashContentWrapper, DashWrapper, Sidebar } from './Dashboard.style';
 import {
   LineStyle,
@@ -19,9 +17,16 @@ import {
   } from "@material-ui/icons";
 import { Link } from "react-router-dom";
 import { userRoles } from '../../dummyData';
+import AdminLanding from './AdminLanding';
+import StudentList from './students/StudentList';
+import CourseList from './courseList/courseList';
 
 const DashboardContainer = () => {
   const [visible, setVisible] = useState(false);
+  const [courses, setCourses] = useState(false);
+  const [students, setStudents] = useState(false);
+  const [teachers, setTeachers] = useState(false);
+
 
   return (
       <DashWrapper>
@@ -30,12 +35,12 @@ const DashboardContainer = () => {
           <div className="sidebarMenu">
             <h3 className="sidebarTitle">Dashboard</h3>
             <ul className="sidebarList">
-              <Link to="/" className="link">
-                <li className="sidebarListItem active">
+              <li className="sidebarListItem active" onClick={() => {
+                setVisible(false);
+              }}>
                   <LineStyle className="sidebarIcon" />
                   Home
                 </li>
-              </Link>
               <li className="sidebarListItem">
                 <Timeline className="sidebarIcon" />
                 Analytics
@@ -49,32 +54,27 @@ const DashboardContainer = () => {
           <div className="sidebarMenu">
             <h3 className="sidebarTitle">Quick Menu</h3>
             <ul className="sidebarList">
-              {/* <Link to="/students" className="link" > */}
               <li className="sidebarListItem" onClick={() => {
                 setVisible(true);
+                setStudents(true);
               }}>
                   <PermIdentity className="sidebarIcon" />
                   Students
                 </li>
-
-              {/* </Link> */}
-              <Link to="/users" className="link">
-                <li className="sidebarListItem">
+              <li className="sidebarListItem" onClick={() => {
+                setVisible(true);
+                setTeachers(true);
+              }}>
                   <PermIdentity className="sidebarIcon" />
                   Teachers
                 </li>
-
-              </Link>
-              <Link to="/products" className="link">
-                <li className="sidebarListItem">
+              <li className="sidebarListItem" onClick={() => {
+                setVisible(true);
+                setCourses(true);
+              }}>
                   <MenuBookOutlined className="sidebarIcon" />
                   Courses
                 </li>
-              </Link>
-              {/* <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-              Transactions
-            </li> */}
               <li className="sidebarListItem">
                 <BarChart className="sidebarIcon" />
                 Reports
@@ -120,8 +120,10 @@ const DashboardContainer = () => {
 
 
       <DashContentWrapper>
-        {!visible ? <AdminDash /> : null}
-        {visible ? <StudentList /> : null}
+        {!visible ? <AdminLanding /> : null}
+        {visible && students && !courses ? <StudentList /> : null}
+        {/* {visible && teachers ? <TeacherList /> : null} */}
+        {visible && courses && students ? <CourseList/> : null}
       </DashContentWrapper>
       </DashWrapper>
       
