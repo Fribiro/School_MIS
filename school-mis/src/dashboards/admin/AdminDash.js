@@ -8,7 +8,7 @@ import AdminChart from './AdminChart';
 
 
 const Home =styled.div`
-    flex: 4;
+    width: 100%;
 `
 
 const HomeWidgets=styled.div`

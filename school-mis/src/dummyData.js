@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const studentRows = [
   {
     id: 1,
@@ -107,7 +106,6 @@ export const reportsRows = [
     attendance: '95%',
   },
 ];
-=======
 export const userData = [
     {
       name: "Jan",
@@ -261,22 +259,29 @@ export const userData = [
   ];
 export const userRoles = [
   {
-    name : "Alvin",
-    email :  "alvin@gmail.com",
-    password : "Alvin1@",
-    role : "Admin"
+    name: "Festus",
+    email: "fes@gmail.com",
+    password: "Fes12#",
+    role: "Admin"
   },
   {
-    name : "Salma",
-    email :  "salma@gmail.com",
-    password : "Salma1@",
-    role : "Teacher"
+    name: "Alvin",
+    email: "alv@gmail.com",
+    password: "Alv12#",
+    role: "Teacher"
   },
   {
-    name : "Festus",
-    email :  "festus@gmail.com",
-    password : "Festus1@",
-    role : "Student"
+    name: "Salma",
+    email: "salma@gmail.com",
+    password: "Sal12#",
+    role: "Student"
   },
+  {
+    name: "John",
+    email: "john@gmail.com",
+    password: "Joh12#",
+    role: "Student"
+  }
 ]
->>>>>>> 30823004a1e3f8df1bf6877fb226e45f56f43dc0
+
+

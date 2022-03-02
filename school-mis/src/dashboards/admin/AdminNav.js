@@ -1,8 +1,5 @@
 import React from 'react'
-
 import styled from "styled-components";
-
-
 import {
     LineStyle,
     Timeline,
@@ -21,8 +18,7 @@ import {
   import { Link } from "react-router-dom";
 
 const Sidebar = styled.div`
-  flex: 1;
-  height: calc(100vh - 50px);
+  width: 15%;
   background-color: rgb(251, 251, 255);
   position: sticky;
   top: 50px;

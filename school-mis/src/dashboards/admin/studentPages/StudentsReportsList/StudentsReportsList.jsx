@@ -1,7 +1,7 @@
 import "./studentReportsList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import { DeleteOutline } from "@material-ui/icons";
-import { reportsRows } from "../../dummyData";
+import { reportsRows } from "../../../../dummyData";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 // import styled from "styled-components"
